@@ -1,5 +1,5 @@
 import { json } from "@remix-run/node";
-import { Link, NavLink, useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { getPosts } from "~/models/post.server";
 
 export const loader = async () => {
@@ -14,7 +14,6 @@ export default function Posts() {
       <Link to="admin" className="text-red-600 underline">
         Admin
       </Link>
-
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
