@@ -8,8 +8,6 @@ import { createPost } from "~/models/post.server";
 const inputClassName = `w-full rounded border border-gray-500 px-2 py-1 text-lg`;
 
 export const action = async ({ request }: ActionArgs) => {
-  await new Promise((res) => setTimeout(res, 1000));
-
   const formData = await request.formData();
 
   const title = formData.get("title");
